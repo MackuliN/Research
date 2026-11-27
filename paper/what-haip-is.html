@@ -1,0 +1,347 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What HAIP Is</title><link rel="stylesheet" href="../assets/github-preview.css"></head><body><main><p><a href="../index.html">← Research preview home</a></p><h1 id="home-artificial-intelligence-platform-haip">Home Artificial Intelligence Platform (HAIP)</h1>
+<h2 id="what-it-is-and-why-whole-system-comprehension-is-the-research-object">What it is and why whole-system comprehension is the research object</h2>
+<p><em>Anthony Mackulin · Research pre-release 0.1 · November 2026 · Public-review candidate</em></p>
+<h2 id="abstract">Abstract</h2>
+<p>The Home Artificial Intelligence Platform (HAIP) is an owner-operated local AI
+engineering system. It connects the conditions surrounding AI-assisted work:
+who authorized it, which source and knowledge informed it, whether the evaluated
+runtime and resources were available, what exact action was admitted, how its
+effects were checked, what failed, and what may be recovered afterward.</p>
+<p>HAIP is not a model, a single coding agent, a benchmark, or a downloadable
+product. It is an operating structure for deciding when bounded local AI work
+may begin and what evidence is required before its result can be retained. The
+system treats authorization, resource validity, knowledge state, execution,
+failure, and recovery as one connected evidence problem. It is also a research
+environment for testing whether an AI system can preserve and act within those
+relationships instead of merely recalling the component concepts.</p>
+<p>This paper describes that whole. It explains six connected layers—owner
+authority, bound knowledge, qualified resources, bounded action, independent
+verification, and retained disposition—and shows why a valid result at one
+layer cannot repair invalid evidence at another. The supporting cases are
+deliberately bounded. They document how source drift, thermal limits, stale
+retrieval evidence, disagreement between static and guest checks, and
+interruption changed what the owner could responsibly admit, retain, or
+recover. A further observed case shows that a capable language model with access
+to the component descriptions can still reduce HAIP to those components and
+fail to preserve what the integrated system does. The paper does not claim
+architectural priority, autonomous general coding competence, production
+security, or universal applicability.</p>
+<h2 id="name-and-scope">1. Name and scope</h2>
+<p><strong>Home Artificial Intelligence Platform</strong> is HAIP's public-facing name. The
+project originated and continues internally under the working name <strong>Home AI
+Infrastructure Project</strong>. Both names use the acronym <strong>HAIP</strong>.</p>
+<p>This publication describes selected research methods and bounded results. It
+does not release HAIP as a product, provide an installation package, disclose
+its proprietary implementation, or grant access to private operational
+evidence or home infrastructure.</p>
+<p>HAIP is owner-operated. “Owner” is not a generic administrator role in this
+paper. It identifies the person whose projects, equipment, permissions, and
+risk decisions define the system's authority boundary. Models, retrieved text,
+generated tests, workflow records, and recovered evidence may inform that
+boundary, but none can enlarge it by itself.</p>
+<h2 id="what-haip-is">2. What HAIP is</h2>
+<p>HAIP is an <strong>evidence-integrated local AI engineering system</strong>. Its unit of
+concern is not merely a model response. It is the complete disposition of a
+bounded action: proposed, reviewed, authorized, admitted, executed, witnessed,
+failed, deferred, cancelled, or left explicitly unresolved.</p>
+<p>The platform is therefore both an operating structure and a research
+instrument. It tests whether models and agent workflows can remain faithful to
+the whole evidence contract while planning, explaining, acting, evaluating, and
+recovering. Fluency about the individual controls is insufficient if the model
+loses the rules connecting them.</p>
+<p>The system asks six connected questions:</p>
+<ol>
+<li><strong>Was this exact work authorized?</strong></li>
+<li><strong>What source and knowledge informed it, and were they current enough?</strong></li>
+<li><strong>Could the evaluated runtime and resource profile validly perform it now?</strong></li>
+<li><strong>What exact action, scope, worker, and finite attempt were admitted?</strong></li>
+<li><strong>What actually happened, and which independent checks passed or failed?</strong></li>
+<li><strong>What may now be claimed, retained, retried, or recovered?</strong></li>
+</ol>
+<p>HAIP calls an action <strong>evidence-closed</strong> when its record connects the owner's
+decision to a bounded disposition without depending on an unverified success
+statement. Closure does not mean success. A failed, cancelled, deferred, or
+unresolved action can be evidence-closed if its actual disposition and claim
+limits are preserved accurately.</p>
+<p>This creates two linked research questions:</p>
+<ol>
+<li>What evidence is required before the owner can responsibly admit, retain, or
+recover a local AI-assisted result?</li>
+<li>Can an AI system follow the cross-layer relationships that answer that
+question, rather than reducing HAIP to a list of components?</li>
+</ol>
+<h2 id="the-six-connected-layers">3. The six connected layers</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Function</th>
+<th>Evidence boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Owner authority</td>
+<td>Defines exact scope, decision, and invalidation conditions</td>
+<td>Approval does not prove admission, execution, or effect</td>
+</tr>
+<tr>
+<td>Bound knowledge</td>
+<td>Identifies indexed revisions, passages, staleness, and conflict</td>
+<td>A citation can support a statement without being current or granting authority</td>
+</tr>
+<tr>
+<td>Qualified resources</td>
+<td>Binds model, runtime, placement, capacity, pacing, and thermal conditions</td>
+<td>A result outside the evaluated profile cannot inherit its acceptance</td>
+</tr>
+<tr>
+<td>Bounded action</td>
+<td>Identifies proposal, editable surface, worker, permissions, and finite attempt</td>
+<td>Admission cannot silently widen scope or create unlimited retries</td>
+</tr>
+<tr>
+<td>Independent verification</td>
+<td>Separates trusted checks, isolated execution, and native readback</td>
+<td>A tool return or guest pass cannot establish every required property</td>
+</tr>
+<tr>
+<td>Retained disposition</td>
+<td>Preserves failure, <code>NOT_RUN</code> work, uncertainty, and recovery limits</td>
+<td>Later success and reconstruction cannot rewrite history or authorize replay</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../figures/connected-evidence.svg" alt="HAIP's six connected evidence layers" /></p>
+<p><em>Figure 1. HAIP's six connected evidence layers. An invalid condition stops the
+chain; it is not repaired merely because a later layer produces a favorable
+result.</em></p>
+<p>The significance lies in the connections. A source change can invalidate an
+approval. A thermal condition can defer execution without changing the owner's
+decision. A guest test pass cannot erase a trusted host failure. A citation can
+remain accurate for an indexed snapshot while being stale for the present
+decision. A recovery record can reconstruct evidence without authorizing the
+repetition of an uncertain effect.</p>
+<h2 id="from-decision-to-disposition">4. From decision to disposition</h2>
+<p>The lifecycle separates states that are often collapsed into a single success
+or failure flag.</p>
+<p><img src="../figures/evidence-lifecycle.svg" alt="HAIP evidence-closed action lifecycle" /></p>
+<p><em>Figure 2. Evidence-closed action lifecycle. Reconciliation records what can be
+established; it does not turn evidence into new authority.</em></p>
+<p>Four distinctions organize this lifecycle:</p>
+<ul>
+<li><strong>Approval is not admission.</strong> Approved work may remain deferred when the
+required resources or safety conditions are unavailable.</li>
+<li><strong>Admission is not completion.</strong> Admission binds a specific worker, attempt,
+scope, and resource reservation.</li>
+<li><strong>A return is not necessarily an effect.</strong> Native state is checked where the
+workflow requires evidence of an external result.</li>
+<li><strong>Recovery is not replay.</strong> Reconstructing state does not grant permission to
+repeat a side effect whose earlier outcome remains uncertain.</li>
+</ul>
+<h2 id="how-the-whole-changes-engineering-decisions">5. How the whole changes engineering decisions</h2>
+<p>The system was shaped by failures that appeared outside the narrow question of
+whether a model could generate a plausible answer.</p>
+<h3 id="resource-conditions-are-part-of-result-validity">5.1 Resource conditions are part of result validity</h3>
+<p>A selected local inference profile was evaluated with particular model,
+runtime, placement, memory, pacing, and thermal conditions. An unpaced coding
+trial reached the project's thermal stop and ended with incomplete output. A
+later paced profile completed the selected cases.</p>
+<p>The conclusion was not simply that one run failed and another passed. HAIP
+treated the pacing and thermal conditions as part of the accepted profile.
+Work outside those conditions must be deferred, stopped, or evaluated again; it
+cannot silently inherit the accepted result.</p>
+<h3 id="knowledge-is-evidence-not-authority">5.2 Knowledge is evidence, not authority</h3>
+<p>The local knowledge layer stores indexed source revisions and passage
+locations. Retrieval identifies the snapshot that was actually searched rather
+than implying that the current source remains unchanged. Missing, changed, and
+conflicting source states remain visible.</p>
+<p>Retrieved material is untrusted data. It may support a statement, but it cannot
+authorize an edit or turn instructions found inside a document into owner
+permission. Before consequential work, the workflow separately determines
+whether the indexed evidence is sufficiently current for that decision.</p>
+<h3 id="verification-is-divided-by-trust-function">5.3 Verification is divided by trust function</h3>
+<p>Trusted host checks inspect structure, scope, identities, and static properties
+without executing generated code. Selected semantic checks run inside an
+offline disposable guest with bounded inputs and outputs. Native readback is
+used where the resulting state matters.</p>
+<p>These checks answer different questions. A semantic guest pass cannot cancel a
+trusted static failure. Conversely, a host structure check cannot establish
+guest execution behavior. HAIP retains the disagreement rather than compressing
+it into a convenient overall pass.</p>
+<h3 id="failure-remains-part-of-the-result">5.4 Failure remains part of the result</h3>
+<p>The workflow retains the first observed failure, secondary failures, cancelled
+or timed-out attempts, external assistance, and work not performed after a
+stopping condition. Unperformed work is <code>NOT_RUN</code>, not assumed successful and
+not converted into measured zero.</p>
+<p>Later success does not rewrite the earlier attempt. This makes the development
+record less flattering but more useful: it shows which controls actually
+changed after failure and prevents an eventual completion from becoming a false
+claim that the original path worked.</p>
+<h3 id="recovery-preserves-evidence-without-creating-permission">5.5 Recovery preserves evidence without creating permission</h3>
+<p>Selected workflow evidence can be reconstructed in a disposable location
+without executing recovered code. Missing approvals, invalid dependency chains,
+hash mismatches, and source escapes remain rejection conditions.</p>
+<p>This is bounded recovery of selected evidence and artifacts. It is not a claim
+of whole-system disaster recovery, clean-host reconstruction, or safe replay of
+arbitrary external effects.</p>
+<h2 id="evidence-from-bounded-goals">6. Evidence from bounded goals</h2>
+<p>The present paper draws primarily from four completed, bounded project goals:</p>
+<ul>
+<li>local inference and resource qualification;</li>
+<li>revision-specific local knowledge retrieval and recovery;</li>
+<li>an owner-operated repository workflow with bounded editing and isolated guest
+verification; and</li>
+<li>comparative evaluation contracts with immutable inputs, finite attempts,
+control checks, and failure accounting.</li>
+</ul>
+<p>The evaluations were deliberately small. They include synthetic fixtures, a
+single private environment, and limited task coverage. They provide evidence
+about the selected contracts and failure modes, not general autonomous coding
+ability or population-level performance.</p>
+<p>Examples retained in the record include:</p>
+<ul>
+<li>an unpaced thermal stop;</li>
+<li>a retrieval window that split an otherwise searchable word;</li>
+<li>two generated code proposals that failed independent checks in different
+ways;</li>
+<li>a semantic pass accompanied by a trusted static failure;</li>
+<li>stale and conflicting indexed evidence; and</li>
+<li>interrupted work that could not responsibly be replayed without
+reconciliation.</li>
+</ul>
+<p>These cases are not presented as a benchmark victory. They explain why the
+system's layers are connected.</p>
+<h2 id="whole-system-comprehension-is-part-of-the-research">7. Whole-system comprehension is part of the research</h2>
+<p>HAIP also exposes a comprehension problem: knowing the pieces does not guarantee
+that a model follows the system they form together.</p>
+<p>During this publication-drafting sequence, GPT-5.6 Sol at medium reasoning
+effort had access to the relevant project descriptions but repeatedly framed
+HAIP primarily as a collection of mechanisms or as a novelty comparison. It did
+not fully preserve the central object of the research: the cross-layer rules
+that determine whether evidence from those mechanisms can be combined into a
+responsible disposition. The owner had to correct the framing explicitly.</p>
+<p>That interaction provides a bounded qualitative counterexample to a common
+assumption:
+component-level access and fluent summary do not by themselves establish
+whole-system understanding. A model may correctly name authorization,
+retrieval, resource admission, sandboxing, failure retention, and recovery
+while still losing the invalidation rules and evidentiary relationships that
+make them HAIP.</p>
+<p>This is a qualitative, post hoc observation, not a comparative model benchmark.
+The accompanying <a href="../evidence-and-claims.html">evidence and claim boundaries</a>
+record the context, observed behavior, interpretation boundary, and criteria
+extracted for future evaluation. The present case does
+not establish a failure rate, explain whether the cause was model capability,
+reasoning effort, context selection, instruction following, or conversational
+drift, or justify a claim about other models and configurations. Future
+comparative or quantitative claims require a predeclared whole-system
+comprehension evaluation.</p>
+<p>The research implication is concrete. Evaluating whether a model “understands
+HAIP” must test more than recall of its parts. The model must preserve at least
+the following relationships:</p>
+<ul>
+<li>authority cannot be inferred from evidence;</li>
+<li>approval, admission, execution, effect, and recovery are distinct states;</li>
+<li>a valid later-layer result cannot repair an invalid earlier-layer condition;</li>
+<li>resource and knowledge validity are part of the action's evidence contract;</li>
+<li>failure and <code>NOT_RUN</code> work remain part of the retained disposition; and</li>
+<li>recovery reconstructs state without silently granting replay authority.</li>
+</ul>
+<p>A response that lists the six layers but collapses these relationships has not
+fully followed what HAIP does.</p>
+<h2 id="relationship-to-existing-systems">8. Relationship to existing systems</h2>
+<p>HAIP's individual mechanisms have substantial precedent. Human approval,
+durable execution, sandboxed coding, software attestations, thermal-aware
+inference, provenance, and version-aware retrieval are established areas.</p>
+<p>Close public systems also integrate important portions of the lifecycle.
+<a href="https://arxiv.org/abs/2611.18571">Loop Engineering</a> reports version-bound
+approval, scoped coding loops, independent runtime evidence, stops, and
+reconciliation in a production workflow. <a href="https://arxiv.org/abs/2606.03895">Agent libOS</a>
+provides capability-controlled runtime primitives, persistent process identity,
+one-shot human grants, checkpoints, audit, and explicit external-effect
+settlement. Microsoft's <a href="https://github.com/microsoft/agenticai-design-patterns/blob/main/assets/orchestration-and-workflows/verify-before-approve/docs/architecture.md">Verify Before Approve</a>
+specifies deterministic verification and exact approval/release binding.
+<a href="https://arxiv.org/abs/2511.03690">OpenHands</a> and <a href="https://docs.dapr.io/developing-ai/dapr-agents/dapr-agents-patterns/">Dapr Agents</a>
+provide stronger public coding-runtime or durable-workflow foundations on their
+respective axes.</p>
+<h3 id="references">References</h3>
+<ol>
+<li>Yupeng Pang, Meiling Chen, Yang Yang, and Wei Fu. “Loop Engineering:
+Version-Bound, Evidence-Gated Coordination for Production Coding Agents.”
+arXiv:2611.18571, 2026.</li>
+<li>Yingqi Zhang. “Agent libOS: A Runtime Substrate for Capability-Controlled
+Self-Evolving LLM Agents.” arXiv:2606.03895, 2026.</li>
+<li>Microsoft. “Verify Before Approve.” <em>Agentic AI Design Patterns</em>, accessed
+November 26, 2026.</li>
+<li>Xingyao Wang et al. “The OpenHands Software Agent SDK: A Composable and
+Extensible Foundation for Production Agents.” arXiv:2511.03690, revised
+2026.</li>
+<li>Dapr Authors. “Agentic Patterns.” <em>Dapr Docs</em>, version 1.19, accessed
+November 26, 2026.</li>
+</ol>
+<p>HAIP is therefore not defined by claiming that nobody else uses these ideas.
+Its publication subject is the particular whole documented here: how local
+resource validity, revision-bound knowledge, scoped authority, isolated
+execution, retained failure, and bounded recovery interact in one
+owner-operated system.</p>
+<h2 id="what-haip-is-not">9. What HAIP is not</h2>
+<p>The current evidence does not establish that HAIP is:</p>
+<ul>
+<li>a consumer product or downloadable application;</li>
+<li>a general autonomous software engineer;</li>
+<li>a production-grade multi-user authorization service;</li>
+<li>universally resistant to malicious code or prompt injection;</li>
+<li>a general semantic retrieval or reranking system;</li>
+<li>a general distributed workflow engine;</li>
+<li>a whole-system disaster-recovery solution;</li>
+<li>independently certified; or</li>
+<li>publicly reproducible from the private evidence alone.</li>
+</ul>
+<p>These are not incidental disclaimers. They are part of the system's evidence
+discipline: a bounded result must not silently become a broader claim.</p>
+<h2 id="research-contribution">10. Research contribution</h2>
+<p>The paper's contribution is an empirical and methodological account of HAIP as
+a connected system. It shows how evidence from one layer constrains decisions
+at another, preserves cases where a completion-only report would have hidden
+the controlling failure, and identifies whole-system comprehension as a
+separate requirement from component recall.</p>
+<p>The strongest claim is:</p>
+<blockquote>
+<p>HAIP demonstrates how an owner-operated local AI workflow can make retained
+results answerable to a connected chain of authority, knowledge, resource,
+execution, failure, and recovery conditions—and why correctly describing the
+individual mechanisms does not by itself demonstrate understanding of that
+chain.</p>
+</blockquote>
+<p>This claim is narrower than architectural priority and stronger than a list of
+features. It describes what the system does as a whole and identifies the
+evidence supporting that description.</p>
+<h2 id="publication-and-reproducibility-boundary">11. Publication and reproducibility boundary</h2>
+<p>A public research package can describe the state machine, sanitized contracts,
+synthetic fixtures, expected outcomes, and claim-to-evidence mappings without
+releasing HAIP itself. It must omit proprietary source, raw private evidence,
+operational configuration, credentials, device identities, and home
+infrastructure details.</p>
+<p>The pre-release package records its sterilization, privacy review, and
+rendered-figure checks in its publication manifest. The exact outbound payload
+was inspected in private staging, approved by the owner, and published in the
+public <code>MackuliN/Research</code> repository as pre-release <code>research-v0.1</code>. That
+approval does not extend to a later-modified payload or a software release.</p>
+<h2 id="conclusion">12. Conclusion</h2>
+<p>HAIP is the operating structure around owner-controlled local AI work. It does
+not treat model output, approval, execution, testing, or recovery as isolated
+proofs. It connects them so that each retained result has a bounded authority,
+known evidence state, valid resource profile, identified action, independently
+checked disposition, and explicit recovery limit.</p>
+<p>The practical consequence is that favorable evidence at the end of a workflow
+cannot erase invalid conditions earlier in the chain. A passed test cannot
+repair stale authorization. A current citation cannot grant permission. A guest
+pass cannot erase a host failure. A recovered record cannot authorize replay.
+And a later success cannot rewrite the failure that made the system change.</p>
+<p>That connected discipline—not any single component—is what HAIP is.</p>
+<p>The drafting failure described above reinforces the research question. A model
+can have the vocabulary of HAIP without preserving its governing relationships.
+The whole is therefore not a rhetorical wrapper around the pieces; it is an
+object that must be represented and evaluated in its own right.</p>
+</main></body></html>

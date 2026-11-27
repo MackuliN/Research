@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">HAIP evidence-closed action lifecycle</title>
+  <desc id="figure-desc">A state diagram from proposal through review, approval, admission, execution, evidence outcomes, and reconciliation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+    <style>
+      .node { fill: #ffffff; stroke: #334155; stroke-width: 2; }
+      .hold { fill: #f8fafc; stroke: #64748b; stroke-width: 2; stroke-dasharray: 7 5; }
+      .outcome { fill: #f1f5f9; stroke: #334155; stroke-width: 2; }
+      .label { fill: #0f172a; font: 600 17px Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 2.5; marker-end: url(#arrow); }
+      .return { fill: none; stroke: #64748b; stroke-width: 2; stroke-dasharray: 7 5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <path class="arrow" d="M175 100 H220"/>
+  <path class="arrow" d="M365 100 H410"/>
+  <path class="arrow" d="M555 100 H600"/>
+  <path class="arrow" d="M745 100 H790"/>
+
+  <path class="arrow" d="M292 140 V225"/>
+  <path class="arrow" d="M482 140 V225"/>
+  <path class="arrow" d="M482 140 V185 H672 V225"/>
+  <path class="return" d="M672 225 V180 H520 V145"/>
+
+  <path class="arrow" d="M862 140 V295 H672 V380"/>
+  <path class="arrow" d="M862 140 V380"/>
+  <path class="arrow" d="M862 140 V295 H1072 V380"/>
+
+  <path class="arrow" d="M672 440 V505 H862 V540"/>
+  <path class="arrow" d="M862 440 V540"/>
+  <path class="arrow" d="M1072 440 V505 H900 V540"/>
+
+  <rect class="node" x="30" y="60" width="145" height="80" rx="10"/>
+  <text class="label" x="102.5" y="100">Proposed</text>
+
+  <rect class="node" x="220" y="60" width="145" height="80" rx="10"/>
+  <text class="label" x="292.5" y="100">Reviewed</text>
+
+  <rect class="node" x="410" y="60" width="145" height="80" rx="10"/>
+  <text class="label" x="482.5" y="100">Approved</text>
+
+  <rect class="node" x="600" y="60" width="145" height="80" rx="10"/>
+  <text class="label" x="672.5" y="100">Admitted</text>
+
+  <rect class="node" x="790" y="60" width="145" height="80" rx="10"/>
+  <text class="label" x="862.5" y="100">Executing</text>
+
+  <rect class="outcome" x="220" y="225" width="145" height="70" rx="10"/>
+  <text class="label" x="292.5" y="260">Rejected</text>
+
+  <rect class="outcome" x="410" y="225" width="145" height="70" rx="10"/>
+  <text class="label" x="482.5" y="260">Invalidated</text>
+
+  <rect class="hold" x="600" y="225" width="145" height="70" rx="10"/>
+  <text class="label" x="672.5" y="260">Deferred</text>
+
+  <rect class="outcome" x="600" y="380" width="145" height="60" rx="10"/>
+  <text class="label" x="672.5" y="410">Witnessed</text>
+
+  <rect class="outcome" x="790" y="380" width="145" height="60" rx="10"/>
+  <text class="label" x="862.5" y="410">Failed</text>
+
+  <rect class="hold" x="1000" y="380" width="145" height="60" rx="10"/>
+  <text class="label" x="1072.5" y="410">Unresolved</text>
+
+  <rect class="node" x="790" y="540" width="145" height="70" rx="10"/>
+  <text class="label" x="862.5" y="575">Reconciled</text>
+</svg>
